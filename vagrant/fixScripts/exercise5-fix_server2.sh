@@ -19,4 +19,3 @@ sed -i -e 's/PasswordAuthentication yes/PasswordAuthentication no/g' /etc/ssh/ss
 sed -i -e 's/PermitRootLogin yes/PermitRootLogin no/g' /etc/ssh/sshd_config
 echo "PermitRootLogin without-password" >> /etc/ssh/sshd_config
 echo "AllowUsers root otheruser" >> /etc/ssh/sshd_config
-sudo service sshd restart
