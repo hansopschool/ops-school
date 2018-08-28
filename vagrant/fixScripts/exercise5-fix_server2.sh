@@ -20,5 +20,9 @@
 #echo "PermitRootLogin without-password" >> /etc/ssh/sshd_config
 #echo "AllowUsers root otheruser" >> /etc/ssh/sshd_config
 #option6
-echo "Match address 192.168.100.10" >> /etc/ssh/sshd_config
-echo "PasswordAuthentication no" >> /etc/ssh/sshd_config
+#echo "Match address 192.168.100.10" >> /etc/ssh/sshd_config
+#echo "PasswordAuthentication no" >> /etc/ssh/sshd_config
+#option7
+echo "AllowUsers *@192.168.100.10" >> /etc/ssh/sshd_config
+echo "AllowUsers *@server1" >> /etc/ssh/sshd_config
+echo "AllowUsers vagrant@192.168.100.10" >> /etc/ssh/sshd_config
