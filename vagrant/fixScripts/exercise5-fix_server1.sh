@@ -12,4 +12,4 @@
 eval `ssh-agent`
 sudo ssh-keygen
 sleep 5
-sudo ssh-copy-id -i /vagrant/id_rsa.pub vagrant@92.168.100.11
+sudo ssh-copy-id -i /vagrant/id_rsa.pub vagrant@192.168.100.11
