@@ -4,7 +4,6 @@
 #sleep 15
 #ssh-copy-id -i /home/vagrant/exit.pub vagrant@192.168.100.11
 #global script
-$global = <<SCRIPT
 #check for private key for vm-vm comm
 [ -f /vagrant/id_rsa ] || {
   ssh-keygen -t rsa -f /vagrant/id_rsa -q -N ''
