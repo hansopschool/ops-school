@@ -8,4 +8,7 @@
 #sudo chmod 0600 /home/vagrant/.ssh/id_rsa
 #sleep 5
 #sudo ssh-copy-id -i /home/vagrant/.ssh/id_rsa vagrant@server2
-sed -i -e 's/PasswordAuthentication yes/PasswordAuthentication no/g' /etc/ssh/sshd_config
+#sed -i -e 's/PasswordAuthentication yes/PasswordAuthentication no/g' /etc/ssh/sshd_config
+ssh-keygen
+sleep 5
+ssh-copy-id vagrant@server2
