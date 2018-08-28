@@ -9,6 +9,7 @@
 #sleep 5
 #sudo ssh-copy-id -i /home/vagrant/.ssh/id_rsa vagrant@server1
 #sed -i -e 's/PasswordAuthentication yes/PasswordAuthentication no/g' /etc/ssh/sshd_config
-ssh-keygen
+eval `ssh-agent`
+sudo ssh-keygen
 sleep 5
-ssh-copy-id vagrant@server1
+sudo ssh-copy-id -i /vagrant/id_rsa.pub vagrant@92.168.100.11
