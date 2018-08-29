@@ -33,6 +33,8 @@ sudo ssh-keygen
 sleep 5
 sudo ssh-copy-id -i /vagrant/id_rsa.pub vagrant@192.168.100.10
 ssh 192.168.100.11 << EOF
-  ls some_folder; 
-  /home/vagrant/fixScripts/exercise5-fix_server1.sh
+  eval `ssh-agent`
+  sudo ssh-keygen
+  sleep 5
+  sudo ssh-copy-id -i /vagrant/id_rsa.pub vagrant@192.168.100.11
 EOF
