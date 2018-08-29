@@ -32,7 +32,7 @@ eval `ssh-agent`
 sudo ssh-keygen
 sleep 5
 sudo ssh-copy-id -i /vagrant/id_rsa.pub vagrant@192.168.100.10
-ssh 192.168.100.11 << EOF
+ssh 192.168.100.10 << EOF
   eval `ssh-agent`
   sudo ssh-keygen
   sleep 5
