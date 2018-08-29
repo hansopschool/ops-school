@@ -38,17 +38,20 @@
 #  sleep 5
 #  sudo ssh-copy-id -i /vagrant/id_rsa.pub vagrant@192.168.100.11
 #EOF
+#eval `ssh-agent`
+#sudo ssh-keygen -t rsa -f /vagrant/id_rsa -q -N ''
+#sudo cp /vagrant/id_rsa /home/vagrant/.ssh/id_rsa
+#sudo chmod 0600 /home/vagrant/.ssh/id_rsa
+#sleep 5
+#sudo ssh-copy-id -i /home/vagrant/.ssh/id_rsa vagrant@192.168.100.10
+#ssh 192.168.100.10 << EOF
+#  eval `ssh-agent`
+#  sudo ssh-keygen -t rsa -f /vagrant/id_rsa -q -N ''
+#  sudo cp /vagrant/id_rsa /home/vagrant/.ssh/id_rsa
+#  sudo chmod 0600 /home/vagrant/.ssh/id_rsa
+#  sleep 5
+#  sudo ssh-copy-id -i /home/vagrant/.ssh/id_rsa vagrant@192.168.100.10
+#EOF
 eval `ssh-agent`
-sudo ssh-keygen -t rsa -f /vagrant/id_rsa -q -N ''
-sudo cp /vagrant/id_rsa /home/vagrant/.ssh/id_rsa
-sudo chmod 0600 /home/vagrant/.ssh/id_rsa
-sleep 5
-sudo ssh-copy-id -i /home/vagrant/.ssh/id_rsa vagrant@192.168.100.10
-ssh 192.168.100.10 << EOF
-  eval `ssh-agent`
-  sudo ssh-keygen -t rsa -f /vagrant/id_rsa -q -N ''
-  sudo cp /vagrant/id_rsa /home/vagrant/.ssh/id_rsa
-  sudo chmod 0600 /home/vagrant/.ssh/id_rsa
-  sleep 5
-  sudo ssh-copy-id -i /home/vagrant/.ssh/id_rsa vagrant@192.168.100.10
-EOF
+sudo ssh-keygen
+sudo ssh-copy-id -i /root/.ssh/id_rsa.pub vagrant@192.168.100.10
