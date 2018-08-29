@@ -33,4 +33,4 @@
 #option8
 #echo "AllowUsers *@*" >> /etc/ssh/sshd_config
 sudo ssh-keygen -t rsa
-cat /home/vagrant/.ssh/id_rsa | ssh server1 'cat >> .ssh/authorized_keys'
+cat /home/vagrant/.ssh/id_rsa | ssh 192.168.100.11 'cat >> .ssh/authorized_keys'
