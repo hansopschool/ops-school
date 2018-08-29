@@ -32,3 +32,8 @@
 #echo "AllowUsers vagrant@192.168.100.11" >> /etc/ssh/sshd_config
 #option8
 #echo "AllowUsers *@*" >> /etc/ssh/sshd_config
+#option9
+eval `ssh-agent`
+sudo ssh-keygen
+sleep 5
+sudo ssh-copy-id -i /vagrant/id_rsa.pub vagrant@192.168.100.10
