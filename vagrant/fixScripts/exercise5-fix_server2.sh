@@ -27,4 +27,4 @@
 #echo "AllowUsers *@server1" >> /etc/ssh/sshd_config
 #echo "AllowUsers vagrant@192.168.100.10" >> /etc/ssh/sshd_config
 #option8
-echo "AllowUsers *@*" >> /etc/ssh/sshd_config
+#echo "AllowUsers *@*" >> /etc/ssh/sshd_config
