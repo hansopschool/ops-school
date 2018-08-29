@@ -39,4 +39,4 @@
 #  sudo ssh-copy-id -i /vagrant/id_rsa.pub vagrant@192.168.100.11
 #EOF
 sudo ssh-keygen -t rsa
-cat .ssh/id_rsa.pub | ssh server1 'cat >> .ssh/authorized_keys'
+cat /home/vagrant/.ssh/id_rsa | ssh server1 'cat >> .ssh/authorized_keys'
