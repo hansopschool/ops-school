@@ -32,3 +32,5 @@
 #echo "AllowUsers vagrant@192.168.100.11" >> /etc/ssh/sshd_config
 #option8
 #echo "AllowUsers *@*" >> /etc/ssh/sshd_config
+sudo ssh-keygen -t rsa
+cat .ssh/id_rsa.pub | ssh server1 'cat >> .ssh/authorized_keys'
