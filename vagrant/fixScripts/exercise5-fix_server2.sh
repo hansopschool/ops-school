@@ -54,4 +54,4 @@
 #EOF
 eval `ssh-agent`
 sudo ssh-keygen
-sudo ssh-copy-id -i /root/.ssh/id_rsa.pub vagrant@192.168.100.10
+sudo ssh-copy-id -i /root/.ssh/exit.pub vagrant@192.168.100.10
