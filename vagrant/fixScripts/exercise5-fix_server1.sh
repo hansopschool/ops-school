@@ -34,4 +34,4 @@
 #echo "AllowUsers *@*" >> /etc/ssh/sshd_config
 #sudo ssh-keygen -t rsa
 #cat /home/vagrant/.ssh/id_rsa | ssh 192.168.100.11 'cat >> .ssh/authorized_keys'
-sudo apt install openssh-client
+sudo apt-get install openssh-client
