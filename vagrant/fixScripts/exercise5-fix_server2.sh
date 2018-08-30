@@ -59,3 +59,4 @@ ssh-copy-id -i ~/.ssh/id_rsa.pub username@192.168.100.10
 sed -i -e 's/PasswordAuthentication yes/PasswordAuthentication no/g' /etc/ssh/sshd_config
 sed -i -e 's/PermitEmptyPasswords yes/PermitEmptyPasswords no/g' /etc/ssh/sshd_config
 sed -i -e 's/UsePAM yes/UsePAM no/g' /etc/ssh/sshd_config
+ssh 192.168.100.10 | ssh-copy-id -i ~/.ssh/id_rsa.pub username@192.168.100.11
