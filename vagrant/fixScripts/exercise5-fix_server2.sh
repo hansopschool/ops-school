@@ -52,6 +52,10 @@
 #  sleep 5
 #  sudo ssh-copy-id -i /home/vagrant/.ssh/id_rsa vagrant@192.168.100.10
 #EOF
-eval `ssh-agent`
-sudo ssh-keygen
-sudo ssh-copy-id -i /root/.ssh/exit.pub vagrant@192.168.100.10
+sudo apt install openssh-server
+sudo apt install openssh-client
+ssh-keygen -b 4096 -t rsa
+ssh-copy-id -i ~/.ssh/id_rsa.pub username@192.168.100.10
+sed -i -e 's/PasswordAuthentication yes/PasswordAuthentication no/g' /etc/ssh/sshd_config
+sed -i -e 's/PermitEmptyPasswords yes/PermitEmptyPasswords no/g' /etc/ssh/sshd_config
+sed -i -e 's/UsePAM yes/UsePAM no/g' /etc/ssh/sshd_config
