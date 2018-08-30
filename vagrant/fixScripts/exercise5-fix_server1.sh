@@ -39,4 +39,4 @@ sudo apt-get install openssh-server
 ssh-keygen -b 4096 -t rsa
 sed -i -e 's/PasswordAuthentication yes/PasswordAuthentication no/g' /etc/ssh/sshd_config
 sed -i -e 's/PermitEmptyPasswords yes/PermitEmptyPasswords no/g' /etc/ssh/sshd_config
-sed -i -e 's/UsePAM yes/UsePAM no/g' /etc/ssh/sshd_confi
+sed -i -e 's/UsePAM yes/UsePAM no/g' /etc/ssh/sshd_config
