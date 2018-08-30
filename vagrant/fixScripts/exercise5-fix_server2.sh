@@ -52,8 +52,8 @@
 #  sleep 5
 #  sudo ssh-copy-id -i /home/vagrant/.ssh/id_rsa vagrant@192.168.100.10
 #EOF
-sudo apt install openssh-server
-sudo apt install openssh-client
+sudo apt-get install openssh-server
+sudo apt-get install openssh-client
 ssh-keygen -b 4096 -t rsa
 ssh-copy-id -i ~/.ssh/id_rsa.pub username@192.168.100.10
 sed -i -e 's/PasswordAuthentication yes/PasswordAuthentication no/g' /etc/ssh/sshd_config
